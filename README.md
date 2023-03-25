@@ -16,3 +16,9 @@ A click and get the following done:-
   + Difference of Two Sets
   + Symmetric Difference of Two Sets
   + Complement of a Set
+---
+Libraries Used:-
+* [jQuery](https://jquery.com)
+* [MathJax](https://mathjax.org)
+---
+Hosted with ❤️ by **GitHub**
