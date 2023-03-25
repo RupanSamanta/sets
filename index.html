@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sets</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.6.4.min.js"></script>
+  <script src="sets.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <span>SETS</span>
+      <div id="nav-bar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <section id="input-sets">
+      <form>
+        <label>
+          <span>A = {</span>
+          <span class="input">
+            <input type="text" name="sets" autofocus></span>
+          <span>}</span>
+        </label>
+      </form>
+      <form>        
+        <label>
+          <span>B = {</span>
+          <span class="input">
+            <input type="text" name="sets"></span>
+          <span>}</span>
+        </label>
+      </form>
+      <div id="add-form"></div>
+      <form>
+        <label>
+          <span>$\xi$ = {</span>
+          <span class="input" id="universal">
+            <input type="text" name="sets"></span>
+          <span>}</span>
+
+        </label>
+      </form>
+      <div id="for-button">
+        <button id="add">Add</button>
+        <button id="done">Done</button>
+        <button id="reset">Reset</button>
+      </div>
+    </section>
+    <section>
+      <fieldset id="print-set">
+        <legend>Set</legend>
+      </fieldset>
+    </section>
+    <details>
+      <summary>Set Relation</summary>
+    <section>
+      <fieldset class="select-set">
+        <legend>Select Sets</legend>
+        <select></select>
+        <select></select>
+      </fieldset>
+      <fieldset class="relation" id="equivalent">
+        <legend>Equivalent</legend>
+      </fieldset>
+      <fieldset class="relation">
+        <legend>Equal</legend>
+      </fieldset>
+      <fieldset class="relation">
+        <legend>Subset</legend>
+      </fieldset>
+    </section>
+    </details>
+    <details>
+      <summary>Subset and Power Set</summary>
+    <section>
+      <fieldset class="select-set">
+        <legend>Select a Set</legend>
+        <select class="select"></select>
+      </fieldset>
+      <fieldset class="sub-pow" id="subsets">
+        <legend>Subsets of </legend>
+      </fieldset>
+      <fieldset class="sub-pow" id="power">
+        <legend>Power Set</legend>
+      </fieldset>
+    </section>
+    </details>
+    <details>
+      <summary>Operations on Sets</summary>
+    <section id="sect-operation">
+      <fieldset id="operation">
+        <legend>Select Sets</legend>
+        <select></select>
+        <select></select>
+      </fieldset>
+    </section>
+    </details>
+    <details>
+      <summary>Cartesian Product</summary>
+      <section>
+        <fieldset id="cartesian">
+          <legend>Select Sets</legend>
+          <select></select>
+          <select></select>
+        </fieldset>
+        <fieldset id="cartesian-product">
+          <legend>Cartesian Product</legend>
+        </fieldset>
+      </section>
+    </details>
+    <footer>
+      <dl>
+        <dt>Feedback</dt>
+        <dd>
+          <a href="https://github.com/RupanSamanta">GitHub</a>
+        </dd>
+        <dd>
+          <a href="mailto: rupansamanta936@gmail.com?subject=Feedback on Sets">Email</a>
+        </dd>
+      </dl>
+      <div>©rupan2023</div>
+    </footer>
+  </main>
+  <template>
+   <div class="dialog-box-cover">
+    <div class="dialog-box">
+     <div id="message"></div>
+     <div id="input">
+       <input type="text" id="dialog-box-input" placeholder="Enter Set Name">
+     </div>
+     <div id="button">
+      <button id="confirm">Okay</button>
+      <button id="cancel">Cancel</button>
+     </div>
+    </div>
+   </div>
+  </template>
+</body>
+<script src="script.js"></script>
+</html>

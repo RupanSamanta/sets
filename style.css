@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+:root {
+  --fontsize: 18px;
+  --fontfamily: "Mulish", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.12s ease;
+}
+body {
+  margin: 0;
+}
+header, footer {
+  padding: 18px 15px;
+  font-size: 22px;
+  font-weight: 800;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  font-family: var(--fontfamily);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer {
+  background: linear-gradient(to bottom, gray, dimgrey);
+  margin: 30px 0 0 0;
+  color: whitesmoke;
+  font-size: 17px;
+  font-weight: 600;
+}
+section {
+  margin: 30px 15px;
+  padding: 15px;
+  background: rgba(250,250,250);
+  border: solid 1px lightgray;
+  border-radius: 5px;
+} 
+details section {
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+details {
+  margin: 30px 15px;
+  border-radius: 5px;
+  background: rgba(250,250,250);
+  border: solid 1px lightgray;
+}
+summary {
+  height: 43px;
+  background: rgba(0,0,0,0.05);
+  padding: 10px 20px 10px 30px;
+  border-radius: 5px 5px 0 0;
+  color: dimgrey;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: var(--fontfamily);
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+summary:before {
+  content: '';
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent transparent dimgrey;
+  position: absolute;
+  top: 15px;
+  left: 13px;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+}
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.05);
+  padding: 10px;
+}
+#for-button {
+  border-radius: 5px;
+  background: rgba(0,0,0,0.05);
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#for-button button {
+  width: 33.3%;
+  margin: 0 auto;
+  height: 43px;
+  font-size: var(--fontsize);
+  padding: 10px;
+  border-radius: inherit;
+}
+label span {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: var(--fontsize);
+  font-family: var(--fontfamily);
+  color: dimgrey;
+}
+.input {
+  width: auto;
+  max-width: calc(100vw - 130px);
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: -5px;
+}
+input {
+  background: transparent;
+  display: inline-block;
+  border: none;
+  border: solid 1px transparent;
+  outline: none;
+  width: 5px;
+  font-size: 17px;
+  font-family: var(--fontfamily);
+  color: gray;
+  margin: 0;
+  border-radius: 5px;
+}
+input:nth-child(n+3) {
+  margin-left: 5px;
+}
+input:focus {
+  border-color: #006cff;
+}
+select {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: var(--fontsize);
+  color: dimgrey;
+  font-family: var(--fontfamily);
+}
+button {
+  border: none;
+  outline: none;
+  color: dimgray;
+  background: transparent;
+  cursor: pointer;
+}
+label button {
+  width: 100%;
+  height: 43px;
+  font-size: var(--fontsize);
+  padding: 10px;
+  border-radius: inherit;
+}
+#done:hover {
+  background: rgba(21,140,255,0.8);
+  color: whitesmoke;
+}
+#add:hover {
+  background: rgba(65, 196, 35,0.8);
+  color: whitesmoke;
+}
+#reset:hover {
+  background: rgba(255, 77, 77,0.8);
+  color: whitesmoke;
+}
+label:hover {
+  box-shadow: 0 3px 5px 1px rgba(21,140,255,0.3);
+}
+fieldset {
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  padding: 15px;
+  color: dimgrey;
+}
+legend {
+  font-size: var(--fontsize);
+  font-family: var(--fontfamily);
+  font-weight: 700;
+}
+fieldset:hover:nth-child(n+2) {
+  transform: scale(1.01);
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 0 8px 3px rgba(0,0,0,0.05);
+}
+fieldset p {
+  width: calc(100vw - 100px);
+  overflow-x: scroll;
+  margin: 0 auto;
+  user-select: none;
+}
+fieldset select {
+  width: 45%;
+  display: inline-block;
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+fieldset:nth-child(n+2) {
+  margin-top: 20px;
+}
+.select-set, #operation, #cartesian {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.select {
+  width: 100%;
+}
+footer div {
+  margin: 20px auto 0 auto;
+  padding: 20px 0 5px 0;
+  text-align: center;
+  border-top: solid 1px lightgray;
+}
+dt {
+  font-weight: 700;
+}
+dd {
+  margin: 10px 20px;
+  font-weight: 400;
+}
+.dialog-box-cover {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.55);
+  z-index: 9999;
+  touch-action: none;
+  transition: all 0.25s ease;
+}
+@keyframes appear {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+.dialog-box {
+  width: 270px;
+  height: fit-content;
+  padding: 15px;
+  background: whitesmoke;
+  border-radius: 3.5px;
+  box-shadow: 0 0 20px 10px rgba(0,0,0,0.25);
+  animation: appear 0.35s ease 1;
+  user-select: none; 
+}
+.dialog-box #message {
+  font-size: 20px;
+  font-family: var(--fontfamily);
+  font-weight: 700;
+  color: black;
+  margin: 0 auto 30px auto;
+}
+.confirm #message {
+  margin: 0 auto 75px auto;
+}
+.dialog-box #input {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+.dialog-box #input input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px dimgrey;
+  color: dimgrey;
+  border-radius: 0;
+}
+.dialog-box-cover .prompt #input {
+  display: block;
+}
+.dialog-box #button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 75px auto 0 auto;
+}
+.prompt #button {
+  margin: 30px auto 0 auto;
+}
+.dialog-box #button button {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  border-radius: 3.5px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--fontfamily);
+  border: solid 1px dimgrey;
+  color: whitesmoke;
+}
+.dialog-box #confirm {
+  margin: 0 10px 0 0;
+  background: rgba(65, 196, 35,0.8);
+}
+.dialog-box #cancel {
+  margin: 0 0 0 10px;
+  background: rgba(255, 77, 77,0.8);
+}
+.alert #cancel {
+  display: none;
+}
+a, a:visited, a:link {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+#nav-bar {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#nav-bar span {
+  display: inline-block;
+  width: 25px;
+  height: 3.5px;
+  background: black;
+  margin: 5px 0 0 0;
+  border-radius: 3px;
+}
+#nav-bar span:first-child {
+  margin: 0;
+}
